@@ -32,7 +32,7 @@ while True:
     success, img = cap.read()
     results = model(img, stream=True)
 
-    # coordinates
+    #coordinates
     for r in results:
         boxes = r.boxes
 
