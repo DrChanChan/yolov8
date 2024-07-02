@@ -155,6 +155,12 @@ def main(args=None):
     
     cap.release()
     cv2.destroyAllWindows()
+    rclpy.spin(yolov8_publisher)
+    yolov8_publisher.destroy_node()
+    rclpy.shutdown()
+    
+if __name__ == '__main__':
+    main()
 
 
 
@@ -231,12 +237,6 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
-    rclpy.spin(yolov8_publisher)
-    yolov8_publisher.destroy_node()
-    rclpy.shutdown()
-    
-if __name__ == '__main__':
-    main()
 
 
 #Segentation && bounding box #################################################################################
